@@ -1,6 +1,6 @@
 from queue import Queue
 def main():
-    patient_queue= queue()
+    patient_queue=Queue()
     while True:
         print("\n=== Patient registration and Appointment Scheduling===")
         print("1.Register Patient")
@@ -32,5 +32,14 @@ def remove_patient(queue):
            else:
               removed_patient = queue.get()
               print(f"Patient' {removed_patient}'removed after comploetion of appointment.")
-              
+def display_queue(queue):
+            if queue. empty():
+                 print(" No patient in the queue.")
+            else:
+              print("Current patient queue...")
+              for index, patient in enumerate (list(queue.queue), start =1):
+                  print(f"{index}. {patient}")
+if __name__ == "__main__":
+     main()
+
     
